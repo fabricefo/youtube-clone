@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Card from "../components/Card";
 
@@ -9,6 +9,14 @@ const Container = styled.div`
 `;
 
 const Home = () => {
+  
+  const [video,setVideos] = useState([])
+  useEffect(()=>{
+    const fetchVideos = async ()=>{
+      const res = axios.get("/videos/random")
+    }
+  })
+
   return (
     <Container>
       <Card />
