@@ -2,6 +2,11 @@ import { createError } from "../error.js";
 import User from "../models/User.js";
 import Video from "../models/Video.js";
 
+// test
+export const test = () => {
+  console.log("test is working")
+}
+
 export const update = async (req, res, next) => {
     if (req.params.id === req.user.id) {
       try {
